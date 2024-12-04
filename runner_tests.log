@@ -1,0 +1,21 @@
+2024-12-04 08:23:10,440 | root | INFO | Метод <test_challenge> выполнен успешно
+2024-12-04 08:23:10,441 | root | WARNING | Метод <test_run>. Неверный тип данных для объекта Runner
+2024-12-04 08:23:10,441 | root | WARNING | Имя может быть только строкой, передано bool
+2024-12-04 08:23:10,443 | root | WARNING | Traceback (most recent call last):
+  File "D:\.......\main.py", line 64, in test_run
+    runner_run = runners.Runner(True)  # создаем экземпляр класса
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "D:\........\runners.py", line 6, in __init__
+    raise TypeError(f'Имя может быть только строкой, передано {type(name).__name__}')
+TypeError: Имя может быть только строкой, передано bool
+
+2024-12-04 08:23:10,443 | root | WARNING | Метод <test_walk>. Неверная скорость для Runner
+2024-12-04 08:23:10,443 | root | WARNING | Скорость не может быть отрицательной, сейчас -5
+2024-12-04 08:23:10,444 | root | WARNING | Traceback (most recent call last):
+  File "D:\........\main.py", line 46, in test_walk
+    runner_walk = runners.Runner('Runner_1', -5)  # создаем экземпляр класса
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.........\runners.py", line 11, in __init__
+    raise ValueError(f'Скорость не может быть отрицательной, сейчас {speed}')
+ValueError: Скорость не может быть отрицательной, сейчас -5
+
